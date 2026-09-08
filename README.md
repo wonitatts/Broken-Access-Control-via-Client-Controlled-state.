@@ -76,7 +76,7 @@ General principle: never trust input, and never let the client vote on its own p
 
 ## Detection (the defender's angle)
 
-If you're defending an app, here's how an attack like this shows up:
+I'm new at this point if you're reading this, but If you're defending an app, here's how an attack like this shows up from what i found:
 
 - **Identity mismatch in logs.** An authenticated session belonging to a *non-admin* user hitting `/admin` or `/admin/delete` is a loud anomaly. The signal is a privileged endpoint being reached by an identity your server-side records say isn't privileged.
 - **Alert on privileged actions.** A `delete?username=` request from a session that should never have reached the admin panel is worth an immediate look.
